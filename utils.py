@@ -11,7 +11,7 @@ def date_handler(date: str) -> str | None:
     date = date.replace(' ', '')
 
     try:
-        if date == 'hoje':
+        if date == 'hoje' or date == 'ontem' or date == 'amanhã':
             return 'hoje'
         trimmed = date.split(',')
         date = trimmed[1] + '/2024'

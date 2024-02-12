@@ -1,5 +1,7 @@
 """Match model"""
-class Match():
+
+
+class Match:
     def __init__(self, championship, home, away, date, hour):
         self.championship = championship
         self.home = home
@@ -12,7 +14,7 @@ class Match():
 
     def __repr__(self):
         return f'{self.championship} - {self.home} vs {self.away} - {self.date} - {self.hour}'
-      
+
     def json(self):
         return {
             'championship': self.championship,
