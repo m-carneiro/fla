@@ -34,5 +34,5 @@ def delete_all_files():
     files = os.listdir(home_path)
 
     for item in files:
-        if item.endswith('.json') or item.endswith('.html'):
+        if item == 'matches.json' or item.endswith('.html'):
             os.remove(home_path + '/' + item)
