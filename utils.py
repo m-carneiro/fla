@@ -1,4 +1,5 @@
 import logging
+import datetime
 import os
 
 
@@ -12,9 +13,11 @@ def date_handler(date: str) -> str | None:
 
     try:
         if date == 'hoje' or date == 'ontem' or date == 'amanhã':
-            return 'hoje'
+            return date
         trimmed = date.split(',')
-        date = trimmed[1] + '/2024'
+        current_year = datetime.date.today().year
+
+        date = f"{trimmed[1]}/{current_year}"
         return date
     except Exception as e:
         logging.log(1, f'{e} - date_handler')
